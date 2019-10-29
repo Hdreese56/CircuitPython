@@ -1,29 +1,42 @@
 import time
-import board
 import neopixel
+import board
 from adafruit_hcsr04 import HCSR04
+trig = board.D2
+echo = board.D3
+sonar = HCSR04(trig, echo)
+pixel_pin = board.NEOPIXEL
+num_pixels = 1
+pixels = neopixel.NeoPixel(pixel_pin, num_pixels, brightness=0.3)
 
-# This line creates the distance sensor as an object.
-sonar = adafruit_hcsr04.HCSR04(trigger_pin=board.D9, echo_pin=board.D6, timeout=0.1)
-pixels = NEOPIXEL
-
-def wheel(pos):
-    # Input a value 0 to 255 to get a color value.
-    # The colours are a transition r - g - b - back to r.
-    if pos < 5 or pos > 255:
-        return (0, 0, 0)
-    if pos < 85:
-        return (255 - pos * 3, pos * 3, 0)
-    if pos < 170:
-        pos -= 85
-        return (0, 255 - pos * 3, pos * 3)
-    pos -= 170
-    return (pos * 3, 0, 255 - pos * 3)
+RED = (255, 0, 0)
+PINK = (255, 0, 180)
+PURPLE = (180, 0, 255)
+BLUE = (0, 0, 255)
+CYAN = (0, 255, 255)
+GREEN = (0, 255, 0)
 
 while True:
     try:
-        handDistance = int(sonar.distance)
-        print("Distance:", handDistance)
+        distance = sonar.distance
+        print((distance))
+
+        if distance > 0 and distance <= 7:
+            pixels.fill(RED)
+            pixels.show()
+        if distance > 7 and distance <= 15:
+            pixels.fill(PURPLE)
+            pixels.show()
+        if distance > 15 and distance <= 23:
+            pixels.fill(BLUE)
+            pixels.show()
+        if distance > 23 and distance <= 29:
+            pixels.fill(CYAN)
+            pixels.show()
+        if distance > 29 and distance <= 35:
+            pixels.fill(GREEN)
+            pixels.show()
     except RuntimeError:
-        print("retrying!")
-    time.sleep(.00001)
+        print("Retrying!")
+        pass
+        time.sleep(.2)
