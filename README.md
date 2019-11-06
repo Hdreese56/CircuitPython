@@ -30,7 +30,7 @@ while True:
 
 ### Wiring Diagram
 
-<![pic 1](Documents/pi_1)
+![GitHub Pic 1](media/pi1.png)
 
 ## Circuit Python Servo
 
@@ -73,7 +73,7 @@ while True:
 - Duty cycle isn't as complicated as it looks
 
 ### Wiring Diagram
-
+![GitHub Servo](media/servo_bb.png)
 ## Circuit Python LCD
 
 ### Description
