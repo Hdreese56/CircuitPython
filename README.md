@@ -290,4 +290,7 @@ The purpose of this assignment was to get us used to using VS code. It was a pre
 - Its a little more complicated than MU
 
 ### Code
-
+import time  
+ while True:
+     print("hello")
+     time.sleep(.1)
