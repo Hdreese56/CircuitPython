@@ -26,13 +26,13 @@ while True:
         lcd.print("presses")
 
         if switch.value:
-            clicks2 =-1
+            clicks2 =-1 # Make it go down 
 
             lcd.set_cursor_pos(0,7)
             lcd.print(" Down ")
             lcd.print("  ")
             lcd.set_cursor_pos(0,7)
-        if switch.value and clicks2 == -1:
+        if switch.value and clicks2 == -1: # make it go up
             clicks2 = 1
             lcd.set_cursor_pos(0,7)
             lcd.print(" Up ")
@@ -40,7 +40,7 @@ while True:
             lcd.set_cursor_pos(0,7)
         if button.value: #and oldButton:
 
-            lcd.set_cursor_pos(1,8)
+            lcd.set_cursor_pos(1,8) #prints number
             clicks += clicks2
             lcd.print(str(clicks))
             lcd.print("  ")

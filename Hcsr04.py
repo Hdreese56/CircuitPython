@@ -9,7 +9,7 @@ pixel_pin = board.NEOPIXEL
 num_pixels = 1
 pixels = neopixel.NeoPixel(pixel_pin, num_pixels, brightness=0.3)
 
-RED = (255, 0, 0)
+RED = (255, 0, 0) #sets up the colors
 PINK = (255, 0, 180)
 PURPLE = (180, 0, 255)
 BLUE = (0, 0, 255)
@@ -21,7 +21,7 @@ while True:
         distance = sonar.distance
         print((distance))
 
-        if distance > 0 and distance <= 7:
+        if distance > 0 and distance <= 7: # sets up the distance and thier coresponding colors
             pixels.fill(RED)
             pixels.show()
         if distance > 7 and distance <= 15:

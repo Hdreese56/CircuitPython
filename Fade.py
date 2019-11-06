@@ -7,8 +7,8 @@ led = pulseio.PWMOut(board.D13, frequency=5000, duty_cycle=0)
 while True:
     for i in range(100):
         # PWM LED up and down
-        if i < 50:
+        if i < 50: #says if I < 50 it goes brighter "
             led.duty_cycle = int(i * 2 * 65535 / 100)  # Up
         else:
             led.duty_cycle = 65535 - int((i - 50) * 2 * 65535 / 100)  # Down
-        time.sleep(0.03)
+        time.sleep(0.03) #This makes it go down

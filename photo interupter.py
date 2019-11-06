@@ -13,13 +13,13 @@ initial = time.monotonic()
 print("working")
 while True:
     #print(photo.value)
-    now = time.monotonic()
+    now = time.monotonic() # sets up the time
     if time.monotonic() % 4 == 0:
-        print("the number of interrupts is ",counter )
+        print("the number of interrupts is ",counter )#prints out phrase
     if photo.value and interrups==0 :
          interrups=1
          initial = now
-         counter = counter + 1
+         counter = counter + 1 # adds the interrups
 
 
     elif not photo.value:

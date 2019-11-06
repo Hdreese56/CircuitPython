@@ -6,7 +6,7 @@ import touchio
 import pulseio
 from adafruit_motor import servo
 
-touch_A1 = touchio.TouchIn(board.A1)
+touch_A1 = touchio.TouchIn(board.A1) # sets up which pins are touch pins
 touch_A5 = touchio.TouchIn(board.A5)
 pwm = pulseio.PWMOut(board.A2, duty_cycle=2 ** 15, frequency=50)
 

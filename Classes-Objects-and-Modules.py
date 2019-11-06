@@ -1,4 +1,8 @@
-class Dog
+import board 
+import time
+import pulseio
+
+class RGB:
     kind = "color"
 
     def__init__(self, r, g, b):
@@ -9,7 +13,7 @@ class Dog
         def red(self):
             self.r1.duty_cycle = 0
             self.g1.duty_cycle = 2**16-1
-            self.b1.duty_cycle = 2**16-1
+            self.b1.duty_cycle = 2**16-1  # uses duty cycle to determine the color
         def green(self):
             self.r1.duty_cycle = 2**16-1
             self.g1.duty_cycle = 0
