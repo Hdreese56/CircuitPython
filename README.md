@@ -289,6 +289,5 @@ The purpose of this assignment was to get us used to using VS code. It was a pre
 - That with VS code you can automatically ppush things to git hub.
 - Its a little more complicated than MU
 
-### Wiring Diagram
+### Code
 
-*insert image*
