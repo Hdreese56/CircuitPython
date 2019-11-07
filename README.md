@@ -135,7 +135,7 @@ while True:
 - How to make it only go up by one for every press.
 
 ### Wiring diagram
-*insert image*
+![GitHub Servo](media/lcdbackpack.png)
 
 ## Circuit Python Photoinerrupters
 
